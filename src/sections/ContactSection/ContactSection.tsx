@@ -10,10 +10,10 @@ export function ContactSection() {
       <Container>
         <div className="grid items-middle gap-12 lg:grid-cols-12 mt-10 lg:mt-20">
           <div className="space-y-2 lg:col-span-6">
-            <div className="text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
+            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
               Patrik Gerdelius
             </div>
-            <h2 className="font-didot text-5xl leading-tight tracking-wide text-[var(--color-ink)] sm:text-6xl">
+            <h2 className="font-didot text-[clamp(3rem,9vw,7.5rem)] leading-[0.95] tracking-wide text-[var(--color-ink)] sm:text-6xl my-8">
               LET'S CONNECT
               <br />
               FURTHER
@@ -40,7 +40,7 @@ export function ContactSection() {
           <div className="space-y-1">
             <div className="w-fit m-auto">
 
-            <div className="text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
+            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
               Email
             </div>
             <a
@@ -54,7 +54,7 @@ export function ContactSection() {
           <div className="space-y-1">
             <div className="w-fit m-auto">
 
-            <div className="text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
+            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
               Phone
             </div>
             <div className="font-serif text-sm tracking-wide text-[var(--color-ink)]">
@@ -66,7 +66,7 @@ export function ContactSection() {
           <div className="space-y-1">
             <div className="w-fit m-auto">
 
-            <div className="text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
+            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
               LinkedIn
             </div>
             <a
@@ -83,11 +83,12 @@ export function ContactSection() {
           <div className="space-y-1">
             <div className="w-fit m-auto">
 
-            <div className="text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
+            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
               CV
             </div>
             <a
-              href="#"
+              href="/cv.pdf"
+              download="Patrik-Gerdelius-CV.pdf"
               className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
             >
               Download PDF

@@ -6,6 +6,7 @@ export type CircleLinkProps = PropsWithChildren<{
   className?: string;
   ariaLabel?: string;
   innerClassName?: string;
+  download?: string | boolean;
 }>;
 
 export function CircleLink({
@@ -13,12 +14,14 @@ export function CircleLink({
   className,
   ariaLabel,
   innerClassName,
+  download,
   children,
 }: CircleLinkProps) {
   return (
     <a
       href={href}
       aria-label={ariaLabel}
+      download={download}
       className={cn(
         "inline-flex h-28 w-28 p-5 items-center justify-center rounded-full bg-[var(--color-green-background)] text-xs text-white shadow-sm transition hover:bg-[var(--color-green-background-hover)] focus:outline-none focus:ring-2 focus:ring-[rgba(251,249,244,0.45)] focus:ring-offset-2 focus:ring-offset-[var(--color-paper)]",
         className,

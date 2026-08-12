@@ -1,4 +1,5 @@
 import { cn } from "../../lib/cn";
+import type { TimelineBullet } from "./types";
 
 function LocationIcon() {
   return (
@@ -39,7 +40,7 @@ export type TimelineItemBaseProps = {
   description?: string;
   meta?: string;
   dateRange?: string;
-  bullets?: string[];
+  bullets?: TimelineBullet[];
 };
 
 export function TimelineItemBase({
@@ -100,21 +101,38 @@ export function TimelineItemBase({
               isLeft ? "md:ml-auto md:mr-0" : "md:mr-auto md:ml-0",
             )}
           >
-            {bullets.map((bullet, i) => (
-              <li
-                key={i}
-                className={cn(
-                  "flex items-start gap-2.5 text-sm text-[rgba(31,47,40,0.65)]",
-                  isLeft ? "md:flex-row-reverse md:text-right" : "flex-row",
-                )}
-              >
-                <span
-                  className="mt-[5px] h-1.5 w-1.5 shrink-0 rotate-45 bg-[var(--color-ink)]"
-                  aria-hidden
-                />
-                {bullet}
-              </li>
-            ))}
+            {bullets.map((bullet, i) => {
+              const { text, href, linkLabel } =
+                typeof bullet === "string" ? { text: bullet, href: undefined, linkLabel: undefined } : bullet;
+
+              return (
+                <li
+                  key={i}
+                  className={cn(
+                    "flex items-start gap-2.5 text-sm text-[rgba(31,47,40,0.65)]",
+                    isLeft ? "md:flex-row-reverse md:text-right" : "flex-row",
+                  )}
+                >
+                  <span
+                    className="mt-[5px] h-1.5 w-1.5 shrink-0 rotate-45 bg-[var(--color-ink)]"
+                    aria-hidden
+                  />
+                  <span>
+                    {text}
+                    {href ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="my-2 block text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.35)] underline-offset-2 transition hover:decoration-[rgba(31,47,40,0.7)]"
+                      >
+                        — {linkLabel ?? href}
+                      </a>
+                    ) : null}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         ) : (
           <div className="mt-auto pt-8" />

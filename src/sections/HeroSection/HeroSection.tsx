@@ -1,51 +1,41 @@
-import { Container, SectionTitle, Image } from "../../components";
+import { BackgroundSquares, Container, Navbar } from "../../components";
 import { cn } from "../../lib/cn";
-
-import personImg from "../../assets/person.png";
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative min-h-screen bg-[var(--color-paper)]">
-      <Container className="relative flex min-h-screen flex-col py-10">
-        <div className="flex items-start justify-between text-xs tracking-[0.35em] text-[rgba(31,47,40,0.55)]">
-          <div className="font-cormorant uppercase">Patrik Gerdelius</div>
-          <div className="font-cormorantuppercase">Software Engineer</div>
-        </div>
+    <section
+      id="top"
+      className="relative min-h-screen overflow-hidden bg-[var(--color-paper)]"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 90% 90% at 100% 0%, rgba(17,33,24,0.35) 0%, rgba(17,33,24,0.18) 35%, rgba(17,33,24,0.10) 60%, transparent 80%)",
+          // "radial-gradient(ellipse 90% 90% at 100% 0%, rgba(32,94,64,0.35) 0%, rgba(32,94,64,0.18) 35%, rgba(32,94,64,0.10) 60%, transparent 80%)",
+        }}
+      />
+      {/* 17, 33, 24 */}
+      <BackgroundSquares variant="hero" className="z-0" />
 
-        <div className="flex flex-1 flex-col items-center justify-center py-10">
-          <div className="relative flex w-full flex-col items-center">
-            <div className="relative z-10">
-              <SectionTitle
-                title={
-                  <span className="grid grid-row-1">
-                    <span className="relative">
-                      {/* <span className="absolute bottom-0 left-0 mb-3 text-[clamp(2rem,2.2vw,1.4rem)] tracking-[0.25em] mr-3">
-                        my
-                      </span> */}
-                      <span className="">ENGINEER &amp;</span>
-                    </span>
-                    <span>CONSULTANT</span>
-                    {/*<span className="text-[#3d595c]-100">STORIES</span>*/}
-                    {/* <span className="text-[rgba(61,89,92,1)]">STORIES</span> */}
-                    {/* <span className="text-[rgba(101,109,124,1)]">STORIES</span> */}
-                    <span className="text-[var(--color-hero-section-header-accent)]">
-                      DEVELOPER
-                    </span>
-                  </span>
-                }
-                titleClassName="text-[clamp(4rem,7vw,6.5rem)] leading-[0.96] tracking-[0.08em] text-black-100"
-              />
-            </div>
+      <Navbar />
 
-            <div className="relative z-0 -mt-6 sm:-mt-10">
-              <div className="" />
-              <Image
-                src={personImg}
-                alt="Portrait"
-                rounded="none"
-                className="h-84 w-64 sm:h-100 sm:w-76 object-cover"
-              />
+      <Container className="relative z-10 flex min-h-screen flex-col pb-10 pt-32">
+        <div className="flex flex-1 flex-col justify-end gap-12 pb-16">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <h1 className="font-didot text-[clamp(3rem,9vw,7.5rem)] leading-[0.95] tracking-tight text-[var(--color-ink)]">
+              Patrik Gerdelius
+            </h1>
+            <div className="max-w-xs font-cormorant text-sm leading-relaxed tracking-wide text-[rgba(31,47,40,0.65)] lg:text-right">
+              Software Engineer, currently based in Seoul, South Korea. I build
+              scalable & maintainable web and mobile applications with a focus
+              on React, React Native, and TypeScript.
             </div>
+          </div>
+
+          <div className="font-didot text-xs uppercase tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
+            patrik.gerdelius@hotmail.com
           </div>
         </div>
 

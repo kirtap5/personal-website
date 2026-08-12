@@ -1,9 +1,19 @@
-import { Container, RevealOnScroll, SectionTitle } from "../../components";
+import {
+  BackgroundSquares,
+  Container,
+  RevealOnScroll,
+  SectionTitle,
+} from "../../components";
 
 export function VisionSection() {
   return (
-    <section id="vision" className="bg-[var(--color-paper)] py-16 sm:py-24">
-      <Container>
+    <section
+      id="vision"
+      className="relative overflow-hidden bg-[var(--color-paper)] py-16 sm:py-24"
+    >
+      <BackgroundSquares variant="vision" className="z-0" />
+
+      <Container className="relative z-10">
         <RevealOnScroll delayMs={20}>
           <div className="mb-16 text-center">
             <SectionTitle
@@ -39,17 +49,15 @@ export function VisionSection() {
                   Who am I
                 </div>
                 <p className="text-sm leading-relaxed text-[rgba(31,47,40,0.6)] md:ml-auto md:max-w-md">
-                  I'm a software engineer with 4+ years of professional
+                  I'm a software engineer with 3+ years of professional
                   experience, currently based in Seoul. My background spans
                   full-stack consulting, mobile development, and a master's in
-                  engineering — with a running thread of actually shipping
-                  things people use. I've led teams, owned codebases, and sat in
+                  engineering. I've led teams, owned codebases, and sat in
                   enough client meetings to know that good software is only half
-                  the job. The other half is communication, crucial to build within scope & requirements.
+                  the job. The other half is communication. Close collaboration
+                  with the client is crucial to build within scope &
+                  requirements.
                 </p>
-                <div className="text-xs italic tracking-wide text-[rgba(31,47,40,0.55)]">
-                  — Me
-                </div>
               </div>
             </RevealOnScroll>
           </div>
@@ -62,17 +70,13 @@ export function VisionSection() {
                   What makes an interessting workplace
                 </div>
                 <p className="text-sm leading-relaxed text-[rgba(31,47,40,0.6)] md:max-w-md">
-                  I want to work on products that matter, with teams that take
-                  craft seriously. That means clean architecture, honest
+                  I want to work on products that matter, with teams that focus
+                  on high quality. That means clean architecture, honest
                   estimates, and the kind of feedback culture where problems get
-                  caught early — not blamed later. I'm drawn to roles where I
-                  can contribute both technically and strategically. I've done
-                  both, and I find the overlap is where the interesting work
-                  lives.
+                  caught early. I'm drawn to roles where I can contribute both
+                  technically and strategically. I've done both, and I find the
+                  overlap the most interesting.
                 </p>
-                <div className="text-xs italic tracking-wide text-[rgba(31,47,40,0.55)]">
-                  — Me
-                </div>
               </div>
             </RevealOnScroll>
 
@@ -112,13 +116,10 @@ export function VisionSection() {
                 <p className="text-sm leading-relaxed text-[rgba(31,47,40,0.6)] md:ml-auto md:max-w-md">
                   I studied abroad in South Korea, co-founded a small web
                   company at 20, wrote a machine learning thesis, and have since
-                  led delivery on government-scale apps. Not a straight line —
-                  but a consistent one. I stay motivated by complexity that's
-                  worth solving, and colleagues who push the work forward.
+                  led delivery on government-scale apps in a foreign country. I
+                  stay motivated by complexity, learning new things, and
+                  colleagues who contribute to a fast-paced environment.
                 </p>
-                <div className="text-xs italic tracking-wide text-[rgba(31,47,40,0.55)]">
-                  — Me
-                </div>
               </div>
             </RevealOnScroll>
           </div>

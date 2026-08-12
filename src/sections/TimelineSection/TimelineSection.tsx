@@ -1,5 +1,6 @@
 import {
   AnimatedCircleLink,
+  BackgroundSquares,
   Container,
   SectionTitle,
   Timeline,
@@ -16,9 +17,13 @@ export function TimelineSection() {
       meta: "Copenhagen, Denmark",
       dateRange: "April 2024 – Ongoing",
       description:
-        "Senior-track consultancy at one of the Nordic region's largest IT firms. Took on both a delivery leadership role and hands-on engineering across mobile and web — the kind of dual responsibility that accelerates growth fast.",
+        "Senior-track consultancy at one of the Nordic region's largest IT firms. Took on both a delivery leadership role and hands-on engineering across mobile and web, working with the full stack.",
       bullets: [
-        "Lead Developer on two nation-wide React Native apps built from scratch for a Danish government body",
+        {
+          text: "Lead Developer on two nation-wide React Native apps built from scratch for a Danish government body. One of which is only distributed internally. Preview of the public app can be found here:",
+          href: "https://apps.apple.com/us/app/jordbrugsfoto/id6740770543",
+          linkLabel: "Jordbrugsfoto on the App Store",
+        },
         "Team Lead across developers and testers — PI planning, workload ownership, scope alignment with client",
         "Maintained a complex national agricultural map system in .NET/C# and Angular",
         "Set up and owned the team's Azure DevOps environment — pipelines, branch strategy, and workflows",
@@ -34,7 +39,11 @@ export function TimelineSection() {
       description:
         "Consultancy work with a clear focus on modern frontend architecture and backend integrations. Operated within a real CI/CD workflow, collaborating closely with clients to ship production-quality work.",
       bullets: [
-        "Built a headless React frontend against WordPress CMS with GraphQL as the data layer",
+        {
+          text: "Built a headless React frontend against WordPress CMS with GraphQL as the data layer",
+          href: "https://funasfjallen.se",
+          linkLabel: "Funasfjällen.se",
+        },
         "Implemented backend cron jobs for live weather and housing data via external API endpoints",
         "Maintained high code quality through direct client collaboration in CI/CD processes",
       ],
@@ -105,7 +114,9 @@ export function TimelineSection() {
       id="timeline"
       className="bg-[var(--color-paper)] py-16 sm:py-24 relative lg:mb-10"
     >
-      <Container>
+      <BackgroundSquares className="z-0" />
+
+      <Container className="relative z-10">
         <SectionTitle
           eyebrow="Professional"
           title="Timeline"
@@ -118,11 +129,12 @@ export function TimelineSection() {
         </div>
       </Container>
 
-      <div className="pointer-events-none absolute inset-0 hidden md:block">
+      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <div className="absolute right-8 top-40 pointer-events-auto">
           <AnimatedCircleLink
-            href="#timeline"
-            ariaLabel="Jump to professional timeline"
+            href="/cv.pdf"
+            download="Patrik-Gerdelius-CV.pdf"
+            ariaLabel="Download my CV"
             direction="right"
             delayMs={120}
           >
