@@ -5,9 +5,9 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-[var(--color-paper)] py-16 sm:py-24 min-h-screen"
+      className="bg-[var(--color-paper)] pb-0 pt-16 sm:py-24 min-h-screen"
     >
-      <Container>
+      <Container className="relative">
         <div className="grid items-middle gap-12 lg:grid-cols-12 mt-10 lg:mt-20">
           <div className="space-y-2 lg:col-span-6">
             <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
@@ -39,63 +39,60 @@ export function ContactSection() {
         <div className="mt-14 lg:mt-20 grid gap-10 border-t border-[rgba(31,47,40,0.15)] pt-10 sm:grid-cols-2 lg:grid-cols-4 justify-content:space-around">
           <div className="space-y-1">
             <div className="w-fit m-auto">
-
-            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
-              Email
-            </div>
-            <a
-              href="mailto:patrik@example.com"
-              className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
-              >
-              patrik.gerdelius@hotmail.com
-            </a>
+              <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
+                Email
               </div>
+              <a
+                href="mailto:patrik@example.com"
+                className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
+              >
+                patrik.gerdelius@hotmail.com
+              </a>
+            </div>
           </div>
           <div className="space-y-1">
             <div className="w-fit m-auto">
-
-            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
-              Phone
+              <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
+                Phone
+              </div>
+              <div className="font-serif text-sm tracking-wide text-[var(--color-ink)]">
+                +46 72 527 48 61
+              </div>
             </div>
-            <div className="font-serif text-sm tracking-wide text-[var(--color-ink)]">
-              +46 72 527 48 61
-            </div>
-            </div>
-
           </div>
           <div className="space-y-1">
             <div className="w-fit m-auto">
-
-            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
-              LinkedIn
+              <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
+                LinkedIn
+              </div>
+              <a
+                href="https://www.linkedin.com/in/patrikgerdelius/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
+              >
+                Patrik Gerdelius
+              </a>
             </div>
-            <a
-              href="https://www.linkedin.com/in/patrikgerdelius/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
-            >
-              Patrik Gerdelius
-            </a>
-            </div>
-
           </div>
           <div className="space-y-1">
             <div className="w-fit m-auto">
-
-            <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
-              CV
+              <div className="text-xs tracking-[0.15em] text-[rgba(31,47,40,0.55)]">
+                CV
+              </div>
+              <a
+                href="/cv.pdf"
+                download="Patrik-Gerdelius-CV.pdf"
+                className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
+              >
+                Download PDF
+              </a>
             </div>
-            <a
-              href="/cv.pdf"
-              download="Patrik-Gerdelius-CV.pdf"
-              className="inline-flex font-serif text-sm tracking-wide text-[var(--color-ink)] underline decoration-[rgba(31,47,40,0.25)] underline-offset-4 hover:decoration-[rgba(31,47,40,0.5)]"
-            >
-              Download PDF
-            </a>
-            </div>
-
           </div>
+        </div>
+
+        <div className="absolute -bottom-15 left-1/2 -translate-x-1/2 text-center text-[10px] tracking-[0.15em] text-[rgba(31,47,40,0.4)]">
+          © 2026 Patrik Gerdelius. All rights reserved.
         </div>
       </Container>
     </section>
