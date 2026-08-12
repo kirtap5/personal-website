@@ -19,8 +19,8 @@ export function ContactSection() {
               FURTHER
             </h2>
             <h2 className="text-sm leading-relaxed text-[rgba(31,47,40,0.6)] md:mr-auto md:ml-0">
-              I'm currently open to opportunities from remote or based in Seoul,
-              South Korea.
+              I'm currently open to opportunities based in Seoul, South Korea or
+              remote.
             </h2>
           </div>
 
